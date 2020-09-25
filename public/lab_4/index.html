@@ -1,1 +1,68 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="author" content="Conner Houtman">
+    <title>Conner Houtman's Lab 4</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="header">
+                <h1>Conner Houtman Lab 4</h1>
+            </div>
+
+            <form action="/api" method="post">
+                <ul class="flex-outer">
+                    <li>
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" maxlength="140" placeholder="Enter your first name here">
+                    </li>
+                    <li>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" maxlength="140" placeholder="Enter your last name here">
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email here">
+                    </li>
+                    <li>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone here">
+                    </li>
+                    <li>
+                        <label for="message">Message</label>
+                        <textarea rows="6" cols="33" id="message" placeholder="Enter your message here"></textarea>
+                    </li>
+                    <li>
+                        <p>Age</p>
+                        <ul class="flex-inner">
+                            <li>
+                                <input type="checkbox" id="18-35">
+                                <label for="18-35">18-35</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="35-50">
+                                <label for="35-50">35-50</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="50-65">
+                                <label for="50-65">50-65</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="submit">Submit</button>
+                    </li>
+                </ul>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

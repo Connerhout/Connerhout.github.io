@@ -14,7 +14,7 @@ html, body {
     width: 70%;
     min-width: 800px;
     margin: 0 auto;
-    background-color: #6091C3;
+    background-color: #669bd1;
   }
   
   /* || typography */
@@ -60,12 +60,12 @@ html, body {
   }
   
   body > * {
-    background-color: red;
+    background-color: #669bd1;
     padding: 1%;
   }
   
   .main, .header, nav, .article, .aside, footer, section {
-    background-color: rgba(0,255,0,0.5);
+    background-color: #669bd1;
     padding: 1%;
   }
   
@@ -115,7 +115,44 @@ html, body {
   .main {
     display: flex;
   }
+
+  .flex-outer li,
+  .flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
   
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+ 
+.flex-outer > li > label + *,
+.flex-inner {
+  flex: 1 0 220px;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+.flex-inner li {
+  width: 100px;
+}
+
+.flex-inner {
+  justify-content: space-between;
+}
+
   .article, section {
     flex: 4;
   }
