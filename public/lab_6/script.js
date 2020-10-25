@@ -35,8 +35,8 @@ document.body.addEventListener('submit', async (e) => {
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
 
-      if (document.querySelector('flex-inner')) {
-        document.querySelector('flex-innter').remove();
+      if (document.querySelector('.flex-inner')) {
+        document.querySelector('.flex-innter').remove();
       }
       
       const countryArr = range(10);
