@@ -1,4 +1,9 @@
 // You may wish to find an effective randomizer function on MDN.
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
 
 function range(int) {
   const arr = [];
@@ -15,13 +20,6 @@ function sortFunction(a, b, key) {
     return 1;
   }
   return 0;
-}
-
-//random number starting with 0 and exclusive of max
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
 }
 
 document.body.addEventListener('submit', async (e) => {
@@ -55,7 +53,7 @@ document.body.addEventListener('submit', async (e) => {
       reverseList.forEach((element, i) => {
         const li = document.createElement('li');
         $(li).append(`<input type="checkbox" value=${element.code} id=${element.code} />`);
-        $(li).append(`<label for=${element.code} > ${element.name} </label>`);
+        $(li).append(`<label for=${element.code}>${element.name} </label>`);
         $(ol).append(li);
       });
 
