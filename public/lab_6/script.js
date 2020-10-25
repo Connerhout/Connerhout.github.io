@@ -18,8 +18,8 @@ function sortFunction(a, b, key) {
 }
 
 //random number starting with 0 and exclusive of max
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+function getRandomInt(min, max) {
+  return Math.random() * (max - min) + min;
 }
 
 document.body.addEventListener('submit', async (e) => {
