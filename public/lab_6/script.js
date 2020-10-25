@@ -36,13 +36,14 @@ document.body.addEventListener('submit', async (e) => {
   })
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
+
       if (document.querySelector('flex-inner')) {
         document.querySelector('flex-innter').remove();
       }
       
       const countryArr = range(10);
       const randomCountryArr = countryArr.map(() => {
-        const randomNum = getRandomInt(243);
+        const randomNum = getRandomInt(0, 243);
         return fromServer[randomNum];
       });
       
@@ -52,7 +53,7 @@ document.body.addEventListener('submit', async (e) => {
       $('form').prepend(ol);
 
       reverseList.forEach((element, i) => {
-        const li = document.createElement('ol');
+        const li = document.createElement('li');
         $(li).append(`<input type="checkbox" value=${element.code} id=${element.code} />`);
         $(li).append(`<label for=${element.code} > ${element.name} </label>`);
         $(ol).append(li);
