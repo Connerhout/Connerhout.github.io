@@ -52,9 +52,9 @@ document.body.addEventListener('submit', async (e) => {
       reverseList.forEach((element, i) => {
         const li = document.createElement('ol');
         $(li).append(`<input type="checkbox" value=${element.code} id=${element.code} />`);
-        $(li).append(`<label for=${element.code} > ${element.name} <label>`);
+        $(li).append(`<label for=${element.code} > ${element.name} </label>`);
         $(ol).append(li);
-      })
+      });
 
       console.log('fromServer', fromServer);
     })
