@@ -37,6 +37,17 @@ document.body.addEventListener('submit', async (e) => {
       if (document.querySelector('flex-inner')) {
         document.querySelector('flex-innter').remove();
       }
+      //getting ten random countries
+      const countryArr = range(10);
+      const randomCountryArr = countryArr.map(() => {
+        const randomNum = getRandomInt(243);
+        return fromServer[randomNum];
+      });
+      
+      const reverseList = randomCountryArr.sort((a, b) => sortFunction(b, a, 'name'));
+      const ol = document.createElement('ol');
+      ol.className = 'flex-inner';
+
       
 
       console.log('fromServer', fromServer);
