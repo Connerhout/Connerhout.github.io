@@ -4,7 +4,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-import countries from './public/lab_6/countries.js';
 
 dotenv.config();
 
@@ -22,17 +21,15 @@ app.use((req, res, next) => {
 });
 
 app.route('/api')
-  .get((req, res) => {
+  .get(async(req, res) => {
     console.log('GET request detected');
-    res.send(`Lab 5 for ${process.env.NAME}`);
+    console.log('fetch request data', data);
   })
-  .post((req, res) => {
+  .post(async(req, res) => {
     console.log('POST request detected');
     const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
-    const json = await data.json();
-    console.log('Form data in res.body', req.body);
+    const json = data.json();
     res.json(json);
-    console.log(json);
   });
 
 app.listen(port, () => {
